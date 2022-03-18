@@ -21,7 +21,12 @@ rollbar.log("Hello world!");
 //Serving files using endpoints (app.get())
 app.get("/", function(req, res){
     rollbar.info("We finally did it!");
-    res.sendFile(path.join(__dirname, "../public/index.html"));
+    res.sendFile(path.join(__dirname, "../public/index.html")); //Must use /index.html for endpoints.
+});
+
+app.post("/yo", (req, res) =>{
+    rollbar.info(`We have received ${req.body}`);
+    res.sendStatus(200);
 });
 
 const port = process.env.PORT || 4005;
