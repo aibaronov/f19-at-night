@@ -15,6 +15,6 @@ function postThing(){
 }
 
 
-console.log(input.value);
+
 //Step 3: Use addEventListener to combine them
-button.addEventListener("click", postThing)
+button.addEventListener("click", postThing);
