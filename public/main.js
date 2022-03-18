@@ -6,7 +6,7 @@ function postThing(){
     let thing = {
         text: input.value
     };
-    axios.post("http://locahost:4005/yo", thing)
+    axios.post("/yo", thing)
     .then((res) => {
         alert(res.data);
     }).catch((err) =>{

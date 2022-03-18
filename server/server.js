@@ -25,7 +25,7 @@ app.get("/", function(req, res){
 });
 
 app.post("/yo", (req, res) =>{
-    rollbar.info(`We have received ${req.body}`);
+    rollbar.info(`We have received ${req.body.text}`);
     res.sendStatus(200);
 });
 
