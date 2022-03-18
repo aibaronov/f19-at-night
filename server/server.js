@@ -19,9 +19,10 @@ rollbar.log("Hello world!");
 app.use(express.static(path.join(__dirname, "../public")))
 
 //Serving files using endpoints (app.get())
-// app.get("/", function(req, res){
-//     res.sendFile(path.join(__dirname, "../public"));
-// });
+app.get("/", function(req, res){
+    rollbar.info("We finally did it!");
+    res.sendFile(path.join(__dirname, "../public"));
+});
 
 const port = process.env.PORT || 4005;
 
