@@ -16,7 +16,7 @@ var rollbar = new Rollbar({
 // record a generic message and send it to Rollbar
 rollbar.log("Hello world!");
 //Serving files using middleware (express.static)
-app.use(express.static(path.join(__dirname, "../public")))
+// app.use(express.static(path.join(__dirname, "../public")))
 
 //Serving files using endpoints (app.get())
 app.get("/", function(req, res){
